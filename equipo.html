@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<html>
+<head>
+<title> SportScale Nosotros</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						  <ul class="nav" id="nav">
+							<li><a href="novedades.html">Novedades</a></li>
+							<li><a href="productos.html">Productos</a></li>
+							<li><a href="clubes.html">Clubes</a></li>
+							<li><a href="contact.html">Contacto</a></li>	
+							<li class="current"><a href="equipo.html">Nosotros</a></li>							
+							<div class="clear"></div>
+						</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row team_box">
+				<h3 class="m_2">Este es nuestro equipo</h3>
+				<div class="col-md-3 team1">
+				  <a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/equipo1.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Brian Vega López</h2>
+						 <p>Este proyecto surgió por idea del recien egresado de la Universidad Tecnologica Intercontinental Brian Vega quie como proyecto inicial ha desarrollado una plataforma para la gerenciación de productos en el ambito de negocios, todo esto con el fin de que el usuario de la web desarrollada pueda proveer a sus clientes sus productos desde una plataforma de fácil acceso y actualizarla permanentemente.</p>
+						 <p>Como toda buena idea esta debe ser puesta a prueba para su uso por ello dicho egresado se valió de amistades para conseguir vinculos con la empresa deportiva SportScale y de esa manera tener un usuario para la web creada. </p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a href="#">BRIAN VEGA LÓPEZ</a></h4>
+				    <p class="m_6">Diseñador y administrador del sitio web de la tienda SportScale</p>
+				</div>
+				<div class="col-md-3 team1">
+					<img src="images/equipo2.jpg" class="img-responsive" title="continue" alt=""/></a>
+					<h4 class="m_5"><a href="#">CESAR MATIAS MARTINEZ</a></h4>
+				    <p class="m_6">Ingeniero en Sistemas y desarrollador Web Profesional</p>
+				</div>
+				<div class="col-md-3 team1">
+					<img src="images/equipo3.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+				</div>
+					<h4 class="m_5"><a href="#">JULIO MARTINEZ Y MIRTHA LÓPEZ</a></h4>
+				    <p class="m_6">Dueños de la empresa multideportiva SportScale</p>
+				</div>
+				<div class="col-md-3 team1">
+					<img src="images/equipo4.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					</div>
+					<h4 class="m_5"><a href="#">KAREN COLMAN</a></h4>
+				    <p class="m_6">Coordinadora y Gerente de Sucursales</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 team_bottom">
+				  <ul class="team_list">
+					<h4>Objetivos de la empresa:</h4>
+		            <li>Con los clientes
+						<p>Ofrecer los mejores productos deportivos del ambito futbolístico a los clientes.</p>
+					</li>
+		            <li><p>Vender a clientes productos originales e importados para su uso</p></li>
+		            <li><p>Brindar a la comunidad la oportunidad de obtener los mejores y más accesibles precios en cuanto a productos deportivos</p></li>
+		            <li>Con el Fútbol
+						<p>La empresa tiene objetivos y compromisos previos con la implementación exclusiva de la venta de accesorios futbolísticos</p></li>
+		          </ul>
+				</div>
+				<div class="col-md-8">
+					<ul class="team_list">
+					 <h4>Visión de la Empresa</h4>
+					 <p class="m_7">-Proveer productos futbolísticos de alta calidad con legalidad y excelentes preios a los clientes en distintos puntos del país.</p>
+		             <img src="images/equipo10.jpg" class="img-responsive" alt=""/>
+		          </ul>
+				</div>
+			</div>
+		</div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Productos</h4>
+						<span style="color: white;"> 
+						<li>Botines</li>
+						<li>Remeras deportivas</li>
+						<li>Balones de futbol</li>
+						<li>Guantes para portero</li>
+						<li>Medidas de protección Rodilleras,etc</li>
+						<li>Accesorios, mochilas </li>
+					</span>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Sucursales</h4>
+						<span style="color: white;">
+						<li>Asunción</li>
+						<li>Caaguazú</li>
+						<li>San Pedro</li>
+						<li>Encarnación</li></span> 
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Contactenos</h4>
+						<span style="color: white;">
+						<li>Asunción (0981-645099)</li>
+						<li>Caaguazú (0982-707799)</li>
+						<li>San Pedro (0971-698569)</li>
+						<li>Encarnación (0982-707799)</li>
+					</ul>
+				</div>
+				<div > <span style="color: white;"><h4>Descargue Nuestros Productos:</h4>
+					<a href="descarga.html">Clic Aquí</a></div></span>
+						<ul class="social">	
+						  <li class="facebook"><a href="https://www.facebook.com/brian.vegalopez"><span> </span></a></li>
+						  <li class="instagram"><a href="https://www.instagram.com/vega_brian08/"><span> </span></a></li>												  				
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+				   <span style="text-align: center;"><p>© 2020 Brian Vega</p></span>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
+</html>

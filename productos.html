@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<html>
+<head>
+<title>SportScale Productos</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+   <script type="text/javascript">
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+		});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						  <ul class="nav" id="nav">
+							<li><a href="novedades.html">Novedades</a></li>
+							<li class="current"><a href="productos.html">Productos</a></li>
+							<li><a href="clubes.html">Clubes</a></li>
+							<li><a href="contact.html">Contacto</a></li>	
+							<li><a href="equipo.html">Nosotros</a></li>							
+							<div class="clear"></div>
+						</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row ex_box">
+				<h3 class="m_2">Nuestros Productos</h3>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto1.jpg" data-fancybox-group="gallery" title="Precio 450.000 G."><img src="images/producto1.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						BOTA ADIDAS PREDATOR 20.1 FG
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto2.jpg" data-fancybox-group="gallery" title="Precio 420.000 G."><img src="images/producto2.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						BOTA NIKE MERCURIAL SUPERFLY VII ACADEMY CR7 FG/MG
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto3.jpg" data-fancybox-group="gallery" title="Precio 400.000 G."><img src="images/producto3.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						ZAPATILLA MUNICH CONTINENTAL
+					</div>
+				</a></div>
+				</div>
+		    </div>
+		    <div class="row ex_box">
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto4.jpg" data-fancybox-group="gallery" title="Precio 500.000 G."><img src="images/producto4.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						ZAPATILLA ADIDAS PREDATOR 20.3 IN
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto5.jpg" data-fancybox-group="gallery" title="Precio 180.000 G."><img src="images/producto5.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						BALÓN NIKE CLUB 2020-2021
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto6.jpg" data-fancybox-group="gallery" title="Precio 150.000 G."><img src="images/producto6.jpg" class="img-responsive" alt="">
+					<div class="img_section_txt">
+						BALÓN NIKE FUTSAL STREET AKKA 2019-2020
+					</div>
+				</a></div>
+				</div>
+		    </div>
+		    <div class="row ex1_box">
+			   <div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto7.jpg" data-fancybox-group="gallery" title="Precio 175.000 G."><img src="images/producto7.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						GUANTE HO SOCCER ESKUDO ARCHITECT ROLL-GECKO
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto8.jpg" data-fancybox-group="gallery" title="Precio 150.000 G."><img src="images/producto8.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						GUANTE RINAT FENIX 2.0 FUTSALA
+					</div>
+				</a></div>
+				</div>
+				<div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto9.jpg" data-fancybox-group="gallery" title="Precio 50.000"><img src="images/producto9.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						ESPINILLERA NIKE MERCURIAL LITE NEYMAR JR
+					</div>
+				</a></div>
+			   </div>
+			   <div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto10.jpg" data-fancybox-group="gallery" title="Precio 120.000 G."><img src="images/producto10.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						MOCHILA ADIDAS X3 ARSENAL
+					</div>
+				</a></div>
+			   </div>
+			   <div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/tobillera-mcdavid-phantom-2-black-0.jpg" data-fancybox-group="gallery" title="Precio 120.000 G."><img src="images/tobillera-mcdavid-phantom-2-black-0.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						TOBILLERA MCDAVID PHANTOM 2+
+					</div>
+				</a></div>
+			   </div>
+			   <div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" href="images/producto11.jpg" data-fancybox-group="gallery" title="Precio 40.000 G."><img src="images/producto11.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						BOLSA ADIDAS MUFC GS
+					</div>
+				</a></div>
+			   </div>
+		    </div>
+		 </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Productos</h4>
+						<span style="color: white;"> 
+						<li>Botines</li>
+						<li>Remeras deportivas</li>
+						<li>Balones de futbol</li>
+						<li>Guantes para portero</li>
+						<li>Medidas de protección Rodilleras,etc</li>
+						<li>Accesorios, mochilas </li>
+					</span>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Sucursales</h4>
+						<span style="color: white;">
+						<li>Asunción</li>
+						<li>Caaguazú</li>
+						<li>San Pedro</li>
+						<li>Encarnación</li></span> 
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Contactenos</h4>
+						<span style="color: white;">
+						<li>Asunción (0981-645099)</li>
+						<li>Caaguazú (0982-707799)</li>
+						<li>San Pedro (0971-698569)</li>
+						<li>Encarnación (0982-707799)</li>
+					</ul>
+				</div>
+				<div > <span style="color: white;"><h4>Descargue Nuestros Productos:</h4>
+					<a href="descarga.html">Clic Aquí</a></div></span>
+						<ul class="social">	
+						  <li class="facebook"><a href="https://www.facebook.com/brian.vegalopez"><span> </span></a></li>
+						  <li class="instagram"><a href="https://www.instagram.com/vega_brian08/"><span> </span></a></li>												  				
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+				   <span style="text-align: center;"><p>© 2020 Brian Vega</p></span>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
+</html>

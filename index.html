@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<html>
+<head>	
+<title>Tienda SportScale</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="novedades.html">Novedades</a></li>
+						    	<li><a href="productos.html">Productos</a></li>
+						    	<li><a href="clubes.html">Clubes</a></li>
+						        <li><a href="contact.html">Contacto</a></li>	
+						        <li><a href="equipo.html">Nosotros</a></li>							
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+		    <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	<div class="banner">
+	<!-- Comienza slider -->
+       <div id="fwslider">
+         <div class="slider_container">
+            <div class="slide"> 
+                <!-- Primer imágen del Slider -->
+               <img src="images/sliderfut.jpg" class="img-responsive" alt=""/>
+                <!-- Slider Imagen -->
+                <!-- Textos del Slider -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <!-- Text title -->
+                        <h1 class="title"> <span style="color:black;">Los mejores accesorios<br>de fútbol</span> </h1>
+                        <!-- /Text title -->
+                        <div class="button"><a href="productos.html">Nuestros productos</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo Slider -->
+            <div class="slide">
+               <img src="images/slider22.jpg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title"> <span style="color: black;">Descarga<br>la lista de productos</span> </h1>
+                       	<div class="button"><a href="descarga.html">Descargar</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--/Segundo Slider -->
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+       </div>
+       <!--/slider -->
+      </div>
+	  <div class="main">
+		<div class="content-top">
+			<h2>Aprecia nuestros articulos</h2>
+			<p>SportScale te trae los mejores botines para todos los terrenos  y utilizarlos para el mejor deporte del mundo</p>
+			<div class="close_but"><i class="close1"> </i></div>
+				<ul id="flexiselDemo3">
+				<li><img src="images/img1.jpg" /></li>
+				<li><img src="images/img2.jpg" /></li>
+				<li><img src="images/img3.jpg" /></li>
+				<li><img src="images/img4.jpg" /></li>
+				<li><img src="images/img5.jpg" /></li>
+			</ul>
+		<h3>Estos botines y muchos otros articulos los encontrarás exclusivamente en SportScale </h3>
+		<h4  style="text-align: center;">Además de Remeras deportivas de los mejores clubes del mundo como también balones de fútbol para todos los terrenos y adecuados a cada estilo de juego ya sea Futsal,Fútbol de campo, playa y más.</h4>
+			<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+		</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+	</div>
+	<div class="content-bottom">
+		<div class="container">
+			<div class="row content_bottom-text">
+			  <div class="col-md-7">
+				<h3>Un poco de la historia<br>de SportScale</h3>
+				<p class="m_1">La tienda de deportes SportScale surge de un proyecto realizado por sus creadores todo con el fin de atribuir a los usuarios la mayor calidad en cuanto a productos en el ambito del fútbol propiamente dicho. Dicha tienda cuenta con una cantidad bastante amplia de articulos deportivos que van desde botines de fútbol de todas las marcas hasta remeras de los equipos más reconocidos del mundo del futbol.</p>
+				<p class="m_2">El creador Brian Vega quien es editor y diseñador de la página ha revelado que la tienda SportScale tiene vinculos directos con diferentes marcas deportivas que se encuentran de moda en la actualidad esto hace que los productos proveidos por ellos sean 100% originales e importados según la marca que los clientes requieran, entre los más conocidos y requeridos se encuentrán Adidas, Nike, Puma y otros, también dicha tienda tiene contratos de legitimidad para la venta de las remeras deportivas de muchos de los clubes más pedidos, todo esto para ofrecer la mejor atención y productos a sus clientes.</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="features">
+		<div class="container">
+			<h3 class="m_3">¡Descubre Más!</h3>
+			<div class="close_but"><i class="close1"> </i></div>
+			  <div class="row">
+				<div class="col-md-3 top_box">
+				  <div class="view view-ninth"><a href="clubes.html">
+                    <img src="images/remeras.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Clubes</h2>
+                        <p>Contamos con las mejores remeras deportivas</p>
+                      </div>
+                   </a>
+                  </div>
+                  <h4 class="m_4"><a href="clubes.html">Visita nuestros clubes</a></h4>
+                  <p class="m_5">Los mejores equipos de futbol del mundo</p>
+                </div>
+                <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="productos.html">
+                    <img src="images/balones.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Balones</h2>
+                        <p>Todos los balones de las mejores marcas para todos los ambientes</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="productos.html">Visita nuestros productos</a></h4>
+                   <p class="m_5">Balones de las marcas Nike,Adidas,Puma,Lotto,Topper</p>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="visualizador.html">
+                    <img src="images/botines.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Botines</h2>
+                        <p>Los mejores botines para futsal,futbol de campo o todo terreno</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="novedades.html">Visita nuestras ofertas</a></h4>
+                   <p class="m_5">Botines de las marcas Adidas,Nike,Puma y otros</p>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="productos.html">
+                    <img src="images/porteros.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Porteros Guardametas</h2>
+                        <p>Accesorios exclusivos para Porteros</p>
+                      </div>
+					 </a> 
+					</div>
+                   <h4 class="m_4"><a href="productos.html">Los mejores articulos para los porteros</a></h4>
+                   <p class="m_5">Guantes de las marcas más reconocidas y protetores</p>
+				</div>
+			</div>
+		 </div>
+	    </div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Productos</h4>
+							<span style="color: white;"> 
+							<li>Botines</li>
+							<li>Remeras deportivas</li>
+							<li>Balones de futbol</li>
+						    <li>Guantes para portero</li>
+						    <li>Medidas de protección Rodilleras,etc</li>
+						    <li>Accesorios, mochilas </li>
+						</span>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Sucursales</h4>
+							<span style="color: white;">
+							<li>Asunción</li>
+							<li>Caaguazú</li>
+							<li>San Pedro</li>
+							<li>Encarnación</li></span> 
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Contactenos</h4>
+							<span style="color: white;">
+							<li>Asunción (0981-645099)</li>
+							<li>Caaguazú (0982-707799)</li>
+							<li>San Pedro (0971-698569)</li>
+							<li>Encarnación (0982-707799)</li>
+						</ul>
+					</div>
+					<div > <span style="color: white;"><h4>Descargue Nuestros Productos:</h4>
+						<a href="descarga.html">Clic Aquí</a></div></span>
+							<ul class="social">	
+							  <li class="facebook"><a href="https://www.facebook.com/brian.vegalopez"><span> </span></a></li>
+							  <li class="instagram"><a href="https://www.instagram.com/vega_brian08/"><span> </span></a></li>												  				
+						    </ul>
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <span style="text-align: center;"><p>© 2020 Brian Vega</p></span>
+		            </div>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
+</html>

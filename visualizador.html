@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SportScale Visualizador</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+					<link rel="stylesheet" href="css/etalage.css">
+					<script src="js/jquery.etalage.min.js"></script>
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+					});
+				</script>	
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						  <ul class="nav" id="nav">
+							<li><a href="novedades.html">Novedades</a></li>
+							<li><a href="productos.html">Productos</a></li>
+							<li><a href="clubes.html">Clubes</a></li>
+							<li><a href="contact.html">Contacto</a></li>	
+							<li><a href="equipo.html">Nosotros</a></li>						
+							<div class="clear"></div>
+						</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 single_left">
+				   <div class="single_image">
+					     <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="images/img1.jpg" />
+									<img class="etalage_source_image" src="images/img1.jpg" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img2.jpg" />
+								<img class="etalage_source_image" src="images/img2.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img3.jpg" />
+								<img class="etalage_source_image" src="images/img3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img4.jpg" />
+								<img class="etalage_source_image" src="images/img4.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img5.jpg" />
+								<img class="etalage_source_image" src="images/img5.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img6.jpg" />
+								<img class="etalage_source_image" src="images/img6.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/img7.jpg" />
+								<img class="etalage_source_image" src="images/img7.jpg" />
+							</li>
+						</ul>
+					    </div>
+				        <div class="single_right">
+				        	<h3>Los mejores zapatos deportivos para Futsal y Fútbol de Campo</h3>
+				        	<p class="m_10">En esta lista encontrarás zapatos de diferentes modelos y colores con variadas marcas, desde las clásicas plataformas bajas hasta las altas con caño sujesivo al tobillo para mayor comodidad para los deportistas, todos estos productos son importados y originales.</p>
+				        	<ul class="options">
+								<h4 class="m_12">Tamaños disponibles</h4>
+								<li><a href="#">38</a></li>
+								<li><a href="#">39</a></li>
+								<li><a href="#">41</a></li>
+								<li><a href="#">42</a></li>
+								<li><a href="#">40</a></li>
+								<li><a href="#">36</a></li>
+							</ul>
+				        	<ul class="product-colors">
+								<h3>Colores Disponibles</h3>
+								<li><a class="color1" href="#"><span> </span></a></li>
+								<li><a class="color2" href="#"><span> </span></a></li>
+								<li><a class="color3" href="#"><span> </span></a></li>
+								<li><a class="color4" href="#"><span> </span></a></li>
+								<li><a class="color5" href="#"><span> </span></a></li>
+								<li><a class="color6" href="#"><span> </span></a></li>
+								<div class="clear"> </div>
+							</ul>
+				        </div>
+				        <div class="clear"> </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="box-info-product">
+					<p class="price2">¡Precios Accesibles!</p>
+				   </div>
+			   </div>
+			</div>		
+			<div class="desc">
+			   	<h4>¡Encuentra todo en SportScale!</h4>
+			   	<p>SportScale cuenta con variadas sucursales distribuidas por todo el Paraguay para mayor accesibilidad al cliente, la casa central se encuentra en la ciudad de Caaguazú de allí el equipo de trabajo realiza las distribuciones a las demás sucursales, todas las sucursales cuentan con delibery realizados en el casco urbano en donde se encuentre la sucursal, con esta cuarentena no existen excusas para no contar con equipos deportivos y poder entrenar.
+					   ¡Te llevamos los productos que quieras a la puerta de tu casa, llama ya!
+				   </p>
+			</div>
+			<div class="row">
+				<h4 class="m_11">Variedades de Productos en SportScale</h4>
+				<div class="col-md-4 product1">
+			     <img src="images/oferta7.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc">
+						<h3>BOTA LOTTO SOLISTA 100 III GRAVITY FG</h3>
+						<p>Bota marca Lotto en descuento especial proveido por la marca </p>
+						<span class="reducedfrom">300.000 G.</span>
+						<span class="actual">250.000 G.</span><br>
+				    </div>
+				</div>
+				<div class="col-md-4 product1">
+					<img src="images/oferta6.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc">
+						</a><h3>BALÓN ADIDAS TEAM TOP REPLIQUE</h3>
+						<p>Precioso Balón de futbol para entrenamientos y listo para ponerse a prueba</p>
+						<span class="reducedfrom">120.000 G.</span>
+						<span class="actual">100.000 G.</span><br>
+				    </div>
+				</div>
+				<div class="col-md-4">
+					<img src="images/oferta3.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc">
+						</a><h3>MOCHILA NIKE PARIS SAINT-GERMAIN STADIUM 2020-2021</h3>
+						<p>Una mochila bella mochila que deslumbra con los colores del club</p>
+						<span class="reducedfrom">120.000 G.</span>
+						<span class="actual">100.000 G.</span><br>
+				    </div>
+				</div>
+			</div>	
+	     </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Products</h4>
+							<li><a href="#">Mens</a></li>
+							<li><a href="#">Womens</a></li>
+							<li><a href="#">Youth</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>About</h4>
+							<li><a href="#">Careers and internships</a></li>
+							<li><a href="#">Sponserships</a></li>
+							<li><a href="#">team</a></li>
+							<li><a href="#">Catalog Request/Download</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Shipping and Order Tracking</a></li>
+							<li><a href="#">Easy Returns</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Replacement Binding Parts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   				</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+		            </div>
+					  <dl id="sample" class="dropdown">
+				        <dt><a href="#"><span>Change Region</span></a></dt>
+				        <dd>
+				            <ul>
+				                <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
+				                <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
+				                <li><a href="#">Newziland<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+				                <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+				                <li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
+				                <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
+				            </ul>
+				         </dd>
+	   				  </dl>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
